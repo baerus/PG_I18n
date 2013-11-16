@@ -22,21 +22,34 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/general.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.i18n.properties-min-1.0.9.js"></script>
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+        </script>
+        <div>
+            <div id="langBox">
+                Language:
+                <select id="lang" onchange="i18n.changeLang()">
+                    <option id="lang_browser" value="browser">Indicated by the browser</option>
+                    <option id="lang_en" value="en">Englisch</option>
+                    <option id="lang_de" value="de">Deutsch</option>
+                    <option id="lang_es" value="es">Spanisch</option>
+                </select>
+                <span id="langBrowser"></span>
+            </div>
+            <span id="hello">Hiiiii</span>
+            <span id="world">Weeeeelt</span>
+        </div>
+        <script type="text/javascript">
+            i18n.updateTexts('de');
         </script>
     </body>
 </html>
