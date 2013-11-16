@@ -36,17 +36,17 @@
         </script>
         <div>
             <div id="langBox">
-                Language:
+                <span id="label_lang">Spracheeee:</span>
                 <select id="lang" onchange="i18n.changeLang()">
                     <option id="lang_browser" value="browser">Indicated by the browser</option>
                     <option id="lang_en" value="en">Englisch</option>
                     <option id="lang_de" value="de">Deutsch</option>
                     <option id="lang_es" value="es">Spanisch</option>
                 </select>
-                <span id="langBrowser"></span>
             </div>
-            <span id="hello">Hiiiii</span>
-            <span id="world">Weeeeelt</span>
+            <span id="hello">Hiiiii</span> <span id="world">Weeeeelt</span><br>
+            <button id="button" onclick="i18n.createText()">buttonnnnn</button>
+            <div id="createdTextDiv"></div>
         </div>
         <script type="text/javascript">
             i18n.updateTexts('de');
